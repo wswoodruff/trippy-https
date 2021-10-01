@@ -12,19 +12,12 @@
   "scripts": {
     "start": "node server",
     "test": "lab -a @hapi/code -L",
-    "lint": "eslint .",
-    "prebuild:css": "node-sass lib/public/css/main.scss lib/public/css/main.build.css --source-map true",
-    "build:css": "postcss lib/public/css/main.build.css -o lib/public/css/main.build.min.css --use cssnano --no-map",
-    "prebuild:js": "browserify lib/public/js/main.js -o lib/public/js/main.build.js -d -t [ babelify --presets [ @babel/preset-env ] ]",
-    "build:js": "uglifyjs lib/public/js/main.build.js -o lib/public/js/main.build.min.js",
-    "build": "npm run build:css && npm run build:js"
+    "lint": "eslint ."
   },
   "dependencies": {
     "@hapi/boom": "9.x.x",
     "@hapi/inert": "6.x.x",
-    "@hapi/vision": "6.x.x",
     "@hapipal/haute-couture": "4.x.x",
-    "handlebars": "4.x.x",
     "joi": "17.x.x"
   },
   "devDependencies": {
@@ -42,8 +35,6 @@
     "@hapipal/toys": "3.x.x",
     "babel-eslint": "10.x.x",
     "babelify": "10.x.x",
-    "browser-sync": "2.x.x",
-    "browserify": "17.x.x",
     "cssnano": "5.x.x",
     "dotenv": "8.x.x",
     "eslint": "7.x.x",
